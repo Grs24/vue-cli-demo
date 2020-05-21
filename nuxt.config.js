@@ -79,6 +79,10 @@ module.exports = {
   // ...routerBase
 
   router: {
-    base: '/vue-cli-demo/dist'
+    base: '/vue-cli-demo/'
+  },
+  generate: {
+    dir: 'docs',
+    subFolders: false
   }
 };
