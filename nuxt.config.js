@@ -76,5 +76,9 @@ module.exports = {
     extend(config, ctx) {},
     cache: false
   },
-  ...routerBase
+  // ...routerBase
+
+  router: {
+    base: '/vue-cli-demo/dist'
+  }
 };
