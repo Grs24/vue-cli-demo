@@ -1,3 +1,12 @@
+const routerBase =
+  process.env.DEPLOY_ENV === 'master'
+    ? {
+        router: {
+          base: '/vue-cli-demo/'
+        }
+      }
+    : {};
+
 module.exports = {
   mode: 'spa',
   /*
@@ -66,5 +75,6 @@ module.exports = {
      */
     extend(config, ctx) {},
     cache: false
-  }
+  },
+  ...routerBase
 };

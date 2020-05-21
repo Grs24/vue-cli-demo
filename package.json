@@ -8,7 +8,10 @@
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server --exec babel-node",
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node server/index.js --exec babel-node",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "build:master": "DEPLOY_ENV=master nuxt build",
+    "generate:master": "DEPLOY_ENV=master nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=master --cleanup"
   },
   "dependencies": {
     "cross-env": "^5.2.0",
@@ -34,6 +37,7 @@
     "nodemailer": "^6.3.0",
     "nodemon": "^1.18.9",
     "passport-local": "^1.0.0",
+    "push-dir": "^0.4.1",
     "sass-loader": "^8.0.0"
   }
 }
